@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BvsBase } from './BVS/BvsBase';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/bvs" element={< BvsBase />} />
+        <Route path="*" element={<>
+          <h1>Domovská stránka</h1>
+          <Link to="/bvs">/bvs</Link><br/>
+          <Link to="/minheap">/minheap</Link><br/>
+          <Link to="/maxheap">/maxheap</Link><br/>
+          <Link to="/rbtrees">/red black trees</Link><br/>
+          <Link to="/b-trees">/b-trees</Link><br/>
+        </>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
