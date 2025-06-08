@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useRef, useState } from "react"
 import { Base } from "../common/Base"
-import { findTreeNode, renderTree, Tree } from "../common/Tree"
+import { Tree } from "../common/Tree"
 import {
   bvs_delete,
   bvs_insert,
