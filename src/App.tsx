@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { BvsBase } from './BVS/BvsBase';
 import { MinHeapBase } from './MinHeap/MinHeapBase';
 import { MaxHeapBase } from './MaxHeap/MaxHeapBase';
+import { RBBase } from './rbtrees/RBBase';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/bvs" element={< BvsBase />} />
         <Route path="/minheap" element={< MinHeapBase />} />
         <Route path="/maxheap" element={< MaxHeapBase />} />
+        <Route path="/rbtrees" element={< RBBase />} />
         <Route path="*" element={<>
           <h1>Domovská stránka</h1>
           <Link to="/bvs">/bvs</Link><br/>
